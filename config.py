@@ -7,7 +7,6 @@ MODELO_EMBEDDING = "bge-m3"
 MODELO_LLM = "llama3.1"
 NUM_CTX = 8192
 
-# Valores usados por qualquer coleção que não os sobrescreva
 PADRAO = {
     "estrategia": "generico",
     "tamanho": 700,

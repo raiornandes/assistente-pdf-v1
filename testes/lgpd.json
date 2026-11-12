@@ -1,0 +1,14 @@
+[
+  {"pergunta": "O que é considerado um dado pessoal sensível?", "secoes": ["5"]},
+  {"pergunta": "Quais são as bases legais para o tratamento de dados pessoais?", "secoes": ["7"]},
+  {"pergunta": "O que acontece se uma empresa descumprir a LGPD?", "secoes": ["52"]},
+  {"pergunta": "Quais são os direitos do titular dos dados?", "secoes": ["18"]},
+  {"pergunta": "Como tratar dados pessoais de crianças e adolescentes?", "secoes": ["14"]},
+  {"pergunta": "Quando termina o tratamento de dados pessoais?", "secoes": ["15"]},
+  {"pergunta": "Quais são os princípios que devem ser observados no tratamento de dados?", "secoes": ["6"]},
+  {"pergunta": "Quando o legítimo interesse pode ser usado como base legal?", "secoes": ["10"]},
+  {"pergunta": "O que é o encarregado de dados e quais são suas atividades?", "secoes": ["41"]},
+  {"pergunta": "Em que casos é permitida a transferência internacional de dados?", "secoes": ["33"]},
+  {"pergunta": "A empresa precisa avisar se houver um incidente de segurança?", "secoes": ["48"]},
+  {"pergunta": "Quem responde pelos danos causados pelo tratamento de dados?", "secoes": ["42"]}
+]

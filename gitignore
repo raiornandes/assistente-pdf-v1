@@ -1,0 +1,18 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Bancos vetoriais (gerados pelo indexar.py, não versionar)
+bancos/
+
+# PDFs enviados pelo app
+dados/uploads/
+
+# Editor / sistema
+.vscode/
+.idea/
+.DS_Store

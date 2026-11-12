@@ -45,18 +45,18 @@ def chunk_estruturado(texto, cfg, fonte):
         m = re.match(cfg["rotulo_secao"], bloco)
         secao = m.group(1) if m else "inicio"
 
-        # início do documento ou seção curta: fica inteira
+        # início do doc
         if not m or len(bloco) <= tam:
             adicionar(bloco, secao)
             continue
 
-        # seção longa: divide em unidades (incisos...) ou, sem padrão, por tamanho
+        # divide em unidades (incisos...) ou, sem padrão por tamanho
         if cfg.get("padrao_unidade"):
             unidades = re.split(cfg["padrao_unidade"], bloco)
         else:
             unidades = sub.split_text(bloco)
 
-        # a 1ª unidade vira cabeçalho de todos os pedaços, se for curta
+        # a primeira unidade vira cabeçalho de todos os pedaços, se for curta
         if len(unidades) > 1 and len(unidades[0]) <= 300:
             cabecalho, corpo = unidades[0], unidades[1:]
         else:

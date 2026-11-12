@@ -39,7 +39,7 @@ class Assistente:
     def buscar_contexto(self, pergunta: str, k: int = 8, n_secoes: int = 2) -> list:
         encontrados = self.vectorstore.similarity_search(pergunta, k=k)
 
-        # as n seções mais bem colocadas no ranking, sem repetir
+        # as N seções mais bem colocadas no ranking
         secoes = []
         for d in encontrados:
             s = d.metadata.get("secao")
@@ -47,7 +47,7 @@ class Assistente:
                 secoes.append(s)
         secoes = secoes[:n_secoes]
 
-        # traz TODOS os chunks dessas seções, em ordem
+        # traz TODOS os chunks dessas seções ordenados
         docs = []
         for s in secoes:
             dados = self.vectorstore.get(where={"secao": s})
@@ -56,7 +56,7 @@ class Assistente:
             grupo.sort(key=lambda d: d.metadata["ordem"])
             docs.extend(grupo)
 
-        # completa com os demais resultados da busca
+        # completando com os demais resultados
         ja = {d.page_content for d in docs}
         docs.extend(d for d in encontrados if d.page_content not in ja)
         return docs
